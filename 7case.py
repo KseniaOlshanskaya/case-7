@@ -102,3 +102,9 @@ def text_decoration(sentanse):
 
         super_new_text = new_text.replace("  ", " ")
         words(super_new_text, sentanse)
+
+def main():
+    sentanse = int(input())      # сколько нужно предложений.
+    text_decoration(sentanse)
+if __name__ == "__main__":
+    main()

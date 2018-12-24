@@ -84,3 +84,21 @@ def text(b, start_words, sentanse, finish_words):
                 sentanse_.append(c)
             a = c
         print(str(sentanse_))
+
+
+def text_decoration(sentanse):
+    """ Function for text correction"""
+    with open("input.txt", "r",  encoding='utf-8') as text:
+        text = text.read()
+        text = text.replace("\n", " ")
+        text = text[1:]
+        new_text = ""
+        super_new_text = ""
+        for i in text:
+            if i.isdigit() or i.isalpha() or i == "!" or i == "." or i == "?" or i == " ":
+                new_text += i
+            else:
+                pass
+
+        super_new_text = new_text.replace("  ", " ")
+        words(super_new_text, sentanse)
